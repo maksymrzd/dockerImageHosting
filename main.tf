@@ -62,6 +62,6 @@ resource "aws_security_group" "dockersg" {
 }
 
 resource "aws_eip" "elasticip" {
-  instance = aws_instance.dockerhostinstancete.id
+  instance = aws_instance.dockerhostinstance.id
   vpc      = true
 }
