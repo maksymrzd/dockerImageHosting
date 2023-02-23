@@ -60,3 +60,8 @@ resource "aws_security_group" "dockersg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
+
+resource "aws_eip" "elasticip" {
+  instance = aws_instance.dockerhostinstancete.id
+  vpc      = true
+}
