@@ -20,5 +20,7 @@ docker build -t maksymrzd/mywebsite:v3 .
 docker push maksymrzd/mywebsite:v3
 ```
 
+![image](https://user-images.githubusercontent.com/114437342/221334852-a42f45f4-bcad-4cbe-89a6-c4cba4093b07.png)
+
 Now we can proceed to the next step. <br>
 <h3 align="left">Step #2: Terraform</h3>
