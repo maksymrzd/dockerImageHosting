@@ -26,7 +26,7 @@ Now we can proceed to the next step. <br>
 <h3 align="left">Step #2: Terraform</h3>
 Here I wrote a simple code for creating an instance and attaching the security group to it.<br>
 Then I added the connection block, which uses access keys to connect.<br>
-After that, I created the `provisioner "remote-exec"` block with specific commands:
+After that, I created the `provisioner "remote-exec"` block with specific commands:<br>
 
 ```tf
 provisioner "remote-exec" {
@@ -47,12 +47,26 @@ provisioner "remote-exec" {
     }
 ```
 <ul>
-<li> `sudo yum update -y` </li>
+<li> "sudo yum update -y" </li>
 Simple update of all packages on a new instance.
-<li> `sudo amazon-linux-extras install nginx1 -y` </li>
+<li> "sudo amazon-linux-extras install nginx1 -y" </li>
 Installation of nginx.
-<li> `sudo systemctl start/enable nginx` </li>
+<li> "sudo systemctl start/enable nginx" </li>
 Starting and enabling nginx service.
+<li>"sudo yum install docker -y"</li>
+Installation of Docker.
+<li>"sudo systemctl start/enable docker"</li>
+Starting and enabling docker service.
+<li>"sudo docker pull maksymrzd/mywebsite:v3"</li>
+Pulling required image.
+<li>"sudo docker run -d -p 8080:80 maksymrzd/mywebsite:v3"</li>
+Running container on port 8080.
+<li>"sudo mv mywebsite.conf /etc/nginx/conf.d/"</li>
+Moving nginx configuration file to the needed directory.
+<li>"sudo nginx -t"</li>
+Checking nginx performance.
+<li>"sudo systemctl restart nginx"</li>
+Restarting nginx service for proper work.
 </ul>
 
 
