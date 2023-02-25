@@ -13,7 +13,7 @@ COPY . /usr/share/nginx/html
 
 It simply copies all the files(html and css) to specific folder.<br>
 <br>
-After creating the Dockerfile, we have to build it and push it to Docker Hub:
+After creating the Dockerfile, I had to build it and push it to Docker Hub:
 
 ```tf
 docker build -t maksymrzd/mywebsite:v3 .
@@ -24,3 +24,37 @@ docker push maksymrzd/mywebsite:v3
 
 Now we can proceed to the next step. <br>
 <h3 align="left">Step #2: Terraform</h3>
+Here I wrote a simple code for creating an instance and attaching the security group to it.<br>
+Then I added the connection block, which uses access keys to connect.<br>
+After that, I created the `provisioner "remote-exec"` block with specific commands:
+
+```tf
+provisioner "remote-exec" {
+    inline = [
+      "sudo yum update -y",
+      "sudo amazon-linux-extras install nginx1 -y",
+      "sudo systemctl start nginx",
+      "sudo systemctl enable nginx",
+      "sudo yum install docker -y",
+      "sudo systemctl start docker",
+      "sudo systemctl enable docker",
+      "sudo docker pull maksymrzd/mywebsite:v3",
+      "sudo docker run -d -p 8080:80 maksymrzd/mywebsite:v3",
+      "sudo mv mywebsite.conf /etc/nginx/conf.d/",
+      "sudo nginx -t",
+      "sudo systemctl restart nginx"
+    ]
+    }
+```
+<ul>
+<li>`sudo yum update -y`</li>
+Simple update of all packages on a new instance.
+<li>`sudo amazon-linux-extras install nginx1 -y`</li>
+Installation of nginx.
+<li>`sudo systemctl start/enable nginx`</li>
+Starting and enabling nginx service.
+</ul>
+
+
+
+
