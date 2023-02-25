@@ -177,3 +177,7 @@ Let's move to the next step.<br>
 In this step I create my own domain name and hosted zone in Route 53, and then connect them.<br>
 Firstly, I went to Route 53 and created the hosted zone with the name of my domain name:<br>
 
+
+
+
+![image](https://user-images.githubusercontent.com/114437342/221338288-012985be-8b80-4dad-8a2f-bb245c5f4a14.png)
