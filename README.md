@@ -47,11 +47,11 @@ provisioner "remote-exec" {
     }
 ```
 <ul>
-<li>`sudo yum update -y`</li>
+<li> `sudo yum update -y` </li>
 Simple update of all packages on a new instance.
-<li>`sudo amazon-linux-extras install nginx1 -y`</li>
+<li> `sudo amazon-linux-extras install nginx1 -y` </li>
 Installation of nginx.
-<li>`sudo systemctl start/enable nginx`</li>
+<li> `sudo systemctl start/enable nginx` </li>
 Starting and enabling nginx service.
 </ul>
 
