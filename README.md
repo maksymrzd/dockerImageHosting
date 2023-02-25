@@ -95,7 +95,7 @@ Checking nginx performance.
 Restarting nginx service for proper work.
 </ul>
 
-Finally, I added the resource `aws_eip`, which is an Elastic IP.<br>
+Finally, I added the resource `aws_eip`, which is an <a href="https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/elastic-ip-addresses-eip.html">Elastic IP</a>.<br>
 
 ```tf
 resource "aws_eip" "elasticip" {
