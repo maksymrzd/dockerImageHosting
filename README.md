@@ -26,7 +26,11 @@ Now we can proceed to the next step. <br>
 <h3 align="left">Step #2: Terraform</h3>
 Here I wrote a simple code for creating an instance and attaching the security group to it.<br>
 Then I added the connection block, which uses access keys to connect.<br>
-Then I need to provision .conf configuration file for nginx web server:<br>
+Then I need to provision .conf configuration file for nginx web server.<br>
+<br>
+Nginx - web server that has gained popularity in recent years due to its speed and efficiency in handling a large number of concurrent connections.Nginx is known for its low memory usage and ability to handle high traffic with less hardware resources. It also supports multiple programming languages, but is most commonly used as a reverse proxy, load balancer, or HTTP cache server.
+<br>
+That's how I provision .conf file:<br>
 
 ```tf
 provisioner "file" {
