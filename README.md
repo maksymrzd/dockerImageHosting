@@ -1,2 +1,1 @@
-Hosting a website
-Using Docker and Terraform
+<h1 align="center">Hosting website on AWS<br>Using Docker and nginx</h1>
