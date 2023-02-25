@@ -26,6 +26,28 @@ Now we can proceed to the next step. <br>
 <h3 align="left">Step #2: Terraform</h3>
 Here I wrote a simple code for creating an instance and attaching the security group to it.<br>
 Then I added the connection block, which uses access keys to connect.<br>
+Then I need to provision .conf configuration file for nginx web server:<br>
+
+```tf
+provisioner "file" {
+    source = "mywebsite.conf"
+    destination = "/home/ec2-user/mywebsite.conf"
+```
+<br>
+File content:<br>
+
+```tf
+server {
+    listen 80;
+    server_name mywebsitedockertest.pp.ua;
+
+    location / {
+        proxy_pass http://localhost:8080;
+    }
+}
+```
+Here I specified port in listen line and my domain name in server_name line.<br>
+
 After that, I created the `provisioner "remote-exec"` block with specific commands:<br>
 
 ```tf
