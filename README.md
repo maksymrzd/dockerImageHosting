@@ -177,7 +177,21 @@ Let's move to the next step.<br>
 In this step I create my own domain name and hosted zone in Route 53, and then connect them.<br>
 Firstly, I went to Route 53 and created the hosted zone with the name of my domain name:<br>
 
+![image](https://user-images.githubusercontent.com/114437342/221364756-40371bce-1e71-45ae-883a-679ba6e55f66.png)
+<br>
+Here I added my instance elastic ip as a new record:<br>
 
+![image](https://user-images.githubusercontent.com/114437342/221364867-65d98f1e-a009-413b-9d4f-e6e7e513826f.png)
+<br>
+After that I went to my domain name settings and added those values from the screen above:<br>
 
+![image](https://user-images.githubusercontent.com/114437342/221365024-1cbc7784-c1c7-4690-9c32-2a0fde0e36ca.png)
+<br>
+
+Now we can proceed to the last step.<br>
+
+<h3 align="left">Final step: Check</h3>
+
+When all step above are finished, we can open our website link and verify that it's working perfectly!<br>
 
 ![image](https://user-images.githubusercontent.com/114437342/221338288-012985be-8b80-4dad-8a2f-bb245c5f4a14.png)
