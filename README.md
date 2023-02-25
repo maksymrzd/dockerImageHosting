@@ -174,6 +174,6 @@ resource "aws_eip" "elasticip" {
 
 Let's move to the next step.<br>
 <h3 align="left">Step #3: DNS</h3>
-In this step I create my own domain name and hosted zone in Route 53.<br>
+In this step I create my own domain name and hosted zone in Route 53, and then connect them.<br>
 Firstly, I went to Route 53 and created the hosted zone with the name of my domain name:<br>
 
